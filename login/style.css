@@ -3,12 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   font-size: 62.5%;
+  --border-default: 0.1rem solid rgba(0, 0, 0, 0.15);
+  --primary-color: #7ac0e4;
+  --secondary-color: #fcbf6c;
+  --background-light: #fff;
 }
-.fox {
-  width: 53rem;
-  height: 48rem;
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
 }
 
 .content {
@@ -21,68 +27,83 @@
   gap: 7.5rem;
 }
 
-main {
-  text-align: center;
-  grid-area: form;
-}
 aside {
   grid-area: science;
+  text-align: center;
 }
-body {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.4rem;
+
+aside img.fox {
+  width: 53rem;
+  height: 48rem;
 }
+
 aside h1 {
-  font-size: 64px;
+  font-size: 6.4rem;
   font-weight: 500;
-  line-height: 75px;
-  padding-left: 15rem;
+  line-height: 7.5rem;
+  color: var(--secondary-color);
+  padding-left: 1.5rem;
 }
-aside h1 span,
-main h2 span {
-  color: #7ac0e4;
+
+aside h1 span {
+  color: var(--primary-color);
 }
-aside h1 {
-  color: #fcbf6c;
-}
+
 main {
+  grid-area: form;
   width: 60rem;
   height: 52rem;
-  border: 0.1rem solid rgba(0, 0, 0, 0.15);
+  border: var(--border-default);
   padding: 4.4rem 5.7rem;
   border-radius: 1.2rem;
+  text-align: center;
 }
+
 main h2 {
   max-width: 43rem;
   font-size: 3.6rem;
   font-weight: 500;
 }
-main .actions {
-  display: flex;
-  flex-flow: column wrap;
+
+main h2 span {
+  color: var(--primary-color);
 }
-main .actions a {
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+  margin-top: 5.4rem;
+}
+
+.actions a {
   font-size: 2.4rem;
   text-decoration: none;
   height: 5.5rem;
   border-radius: 1.2rem;
-  background-color: #35e6e9;
-  color: #fff;
-
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5.4rem;
+  color: var(--background-light);
 }
-main .actions a + a {
+
+.actions a:first-child {
+  background-color: #35e6e9;
+}
+
+.actions a:last-child {
   background-color: #ff8672;
-  margin-top: 4.8rem;
 }
-main footer p {
-  font-size: 1.6rem;
+
+footer {
   margin-top: 8rem;
 }
-main footer a {
+
+footer p {
+  font-size: 1.6rem;
+}
+
+footer a {
   margin-top: 1rem;
   font-size: 1.8rem;
   display: block;
